@@ -1,0 +1,156 @@
+//====================================
+//========      Mixins      ==========
+//====================================
+@mixin flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@mixin daFade {
+  animation: fade 4s;
+}
+
+// ===========================================
+// =======       Mobile Devices        =======
+// ===========================================
+
+@media only screen and (min-width: 320px) {
+  .start {
+    height: 100vh;
+    background-color: black;
+    @include flex-center();
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10vh;
+      position: relative;
+      h1,
+      a {
+        color: white;
+        width: fit-content;
+        margin: 0 auto;
+      }
+      h1 {
+        font-size: 1.7em;
+        text-shadow: 2px 2px 0 white;
+      }
+      a {
+        font-size: 1.4em;
+        border-width: 1px 6px 6px 1px;
+        border-style: solid;
+        border-color: red;
+        color: red;
+        padding: 10px;
+        transition: 1.5s;
+        animation: retroWithBorder 8s infinite, fade 2s;
+      }
+      // a:hover{
+      //   border: 0px solid white;
+      // }
+    }
+
+    &__number {
+      width: 100%;
+      height: 30px;
+      font-size: 2em;
+      padding: 40px 0;
+      display: flex;
+      justify-content: center;
+      color: red;
+      &--1 {
+        animation: movingUpAndDown 1s infinite;
+      }
+      &--2 {
+        animation: movingUpAndDowntwo 1s infinite;
+      }
+      p {
+        height: fit-content;
+        margin: 0 2px;
+      }
+    }
+  }
+}
+
+// ===========================================
+// ========       Ipad/Tablets        ========
+// ===========================================
+
+@media only screen and (min-width: 768px) {
+  .start {
+    &__text {
+      margin-bottom: 15vh;
+      h1 {
+        font-size: 2em;
+      }
+      a {
+        font-size: 1.8em;
+        margin-top: 80px;
+      }
+    }
+    &__number p {
+      font-size: 1.4em;
+    }
+  }
+}
+
+// ===========================================
+// ========       Ipad Pro            ========
+// ===========================================
+
+@media only screen and (min-width: 1024px) {
+  .start {
+    &__text {
+      h1 {
+        font-size: 2.5em;
+      }
+      a {
+        font-size: 2.5em;
+        margin-top: 80px;
+      }
+    }
+    &__number {
+      margin-top:20px;
+      p{
+        font-size: 1.8em;
+      }
+    }
+  }
+}
+// ===========================================
+// ==========        Desktop        ==========
+// ===========================================
+@media only screen and (min-width: 1030px) {
+  .start{
+    &__text{
+      margin-bottom: 10vh;
+      a{
+        margin-top:60px;
+        font-size: 2em;
+        transition: 1s;
+      }
+      a:hover{
+        border-width: 0px 4px 4px 0px;
+      }
+    }
+
+    &__number{
+      user-select: none;
+      margin-top:40px;
+      p{
+        font-size: 1.4em;
+      }
+    }
+  }
+}
+
+// ===========================================
+// =========       Animations        =========
+// ===========================================
+
+// @keyframes movingText{
+//     0%{width:0;}
+//     100%{width:100%;}
+// }
+
+

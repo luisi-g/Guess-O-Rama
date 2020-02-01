@@ -1,0 +1,184 @@
+//====================================
+//========      Mixins      ==========
+//====================================
+@mixin daFade {
+  animation: fade 4s;
+}
+@mixin flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 320px) {
+    .hard{
+        color: orangered;
+        animation: hot 3s infinite;
+    }
+    .normal{
+        color: blue;
+        animation: cold 3s infinite;
+    }
+  .game {
+    background: black;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    input {
+      height: 30px;
+      width: 50%;
+      margin-top: 8vh;
+      background: rgba(0, 0, 0, 0);
+      border: none;
+      border-bottom: 4px solid white;
+      color: white;
+      padding: 5px;
+      font-size: .8em;
+      text-align: center;
+    }
+    input::placeholder {
+      color: white;
+      text-align: center;
+    }
+
+    a {
+      position: fixed;
+      bottom: 13%;
+      color: red;
+      margin-top: 8vh;
+      font-size: 1em;
+      border-width: 1px 6px 6px 1px;
+      border-style: solid;
+      border-color: red;
+      padding: 10px;
+      transition: 1s;
+      animation: retroWithBorder 6s linear infinite;
+    }
+
+    &__heading {
+      margin-top: 10vh;
+      h1 {
+        width: fit-content;
+        margin: 60px auto;
+        font-size: 1.5em;
+      }
+      &__rules {
+        position: relative;
+        height: 10vh;
+        cursor: help;
+        line-height: 1.5;
+        &--1 {
+          display: none;
+          text-align: center;
+          font-size: 1.4em;
+          background: black;
+          transition: 2s;
+        }
+        &--2 {
+          text-align: center;
+          font-size: 0.7em;
+          height: 100%;
+          width: 80%;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    &__count {
+      font-size: 0.6em;
+      display: flex;
+      p {
+        margin: 0 10px;
+      }
+    }
+  }
+
+  .range {
+    margin-top: 55px;
+    font-size: 1.2em;
+  }
+
+  .hot{
+    color:orangered;
+    // animation: hot 3s infinite, toggleSize 1s linear infinite;
+    animation: hot 2s infinite;
+  }
+  .cold{
+    color: blue;
+    animation: cold 2s infinite;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .game {
+    input {
+      width: 60%;
+    }
+    &__heading {
+      h1 {
+        font-size: 2.5em;
+      }
+      &__rules {
+        margin-top: 8vh;
+        &--2 {
+          font-size: 1.1em;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1030px) {
+  .game {
+    input {
+      width: 40%;
+    }
+    &__count{
+        margin-top:40px;
+    }
+    &__heading {
+      &__rules {
+        position: relative;
+        height: 10vh;
+        padding: 5px 0;
+        cursor: help;
+        &--1 {
+          position: absolute;
+          transition: 200ms;
+        }
+        &--1:hover {
+          opacity: 0;
+        }
+        &--2 {
+          text-align: center;
+          font-size: 0.86em;
+        }
+        &--1,
+        &--2 {
+          @include flex-center();
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  a:hover{
+    border-width: 0px 4px 4px 0px;
+  }
+
+  .hot{
+          animation: hot 3s infinite, toggleSize 1s linear infinite;
+  }
+  .cold{
+          animation: cold 3s infinite, toggleSize 1s linear infinite;
+  }
+
+  .hot,.cold{
+      height:30px;
+  }
+}
+

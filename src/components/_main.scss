@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+$pix: 'Press Start 2P', cursive;
+
+
+h1,h2,a,p,input,button{
+    font-family: $pix;
+    text-decoration: none;
+}
+
+@keyframes fade {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeOut {
+      0%{
+          opacity: 1;
+      }
+
+      100%{
+          opacity: 0;
+      }
+  }
+  
+  @keyframes retroWithBorder {
+    0% {
+    }
+    20% {
+      color: rgb(0, 60, 255);
+      border-color: rgb(0, 60, 255);
+    }
+    40% {
+      color: rgb(0, 184, 0);
+      border-color: rgb(0, 184, 0);
+    }
+    60% {
+      color: yellow;
+      border-color: yellow;
+    }
+    80% {
+      color: rgb(161, 0, 161);
+      border-color: rgb(161, 0, 161);
+    }
+    100% {
+      color: red;
+      border-color: red;
+    }
+  }
+  
+  @keyframes retro {
+    0% {
+    }
+    20% {
+      color: rgb(0, 60, 255);
+    }
+    40% {
+      color: rgb(0, 184, 0);
+    }
+    60% {
+      color: yellow;
+    }
+    80% {
+      color: rgb(161, 0, 161);
+    }
+    100% {
+      color: red;
+    }
+  }
+  
+  @keyframes movingUpAndDown {
+    0% {
+    }
+    50% {
+      margin-top: 10px;
+      transform: rotate(20deg);
+    }
+    100% {
+      margin-top: 0px;
+    }
+  }
+  
+  @keyframes movingUpAndDowntwo {
+    0% {
+    }
+    50% {
+      margin-top: 15px;
+      transform: rotate(-20deg);
+    }
+    100% {
+      margin-top: 0px;
+    }
+  }
+
+
+@keyframes shake {
+    0%,
+    100% {
+      transform: rotate(-5deg);
+    }
+    50% {
+      transform: rotate(5deg);
+      color: rgb(187, 4, 178);
+    }
+  }
+  
+  @keyframes strobe{
+      0%, 100%{}
+      50%{text-shadow: 0px 0px 40px rgb(209, 5, 158);}
+  }
+
+  @keyframes toggleSize{
+      0%, 100% {
+      }
+      50%{
+        font-size:1.5em;
+      }
+  }
+
+  @keyframes hot{
+      0%,100%{ color: orangered;}
+      50%{color:rgb(255, 153, 0)}
+  }
+  @keyframes cold{
+      0%,100%{ color: blue;}
+      50%{color: rgb(4, 26, 224);}
+  }

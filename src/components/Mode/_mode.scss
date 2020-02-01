@@ -1,0 +1,75 @@
+//====================================
+//========      Mixins      ==========
+//====================================
+@mixin daFade {
+  animation: fade 4s;
+}
+
+// ===========================================
+// =======       Mobile Devices        =======
+// ===========================================
+@media only screen and (min-width: 320px) {
+  .mode {
+    background: black;
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      margin: 50px 0;
+      font-size: 1.5em;
+      @include daFade();
+    }
+    &__links {
+      margin: 5vh 0;
+      display: flex;
+      flex-direction: column;
+      @include daFade();
+      a {
+        font-size: 1.5em;
+        width: fit-content;
+        margin: 20px auto;
+        color:rgb(187, 4, 178);
+        animation: strobe 3s infinite;
+      }
+    }
+    &__icon {
+      animation: shake 1s linear infinite;
+      font-size: 5em;
+      color: rgb(161, 0, 161);
+    }
+  }
+}
+
+// ===========================================
+// ========       Ipad/Tablets        ========
+// ===========================================
+
+@media only screen and (min-width: 768px) {
+    .mode{
+        h1{
+            font-size:2em;
+        }
+        &__links{
+            flex-direction: row;
+            a{
+                margin: 0 20px;
+                font-size: 1.8em;
+            }
+            a:hover{
+                animation: shake 500ms linear infinite;
+            }
+        }
+        &__icon{
+            font-size: 7em;
+        }
+    }
+}
+
+// ===========================================
+// =========       Animations        =========
+// =========================================== 
+
+
