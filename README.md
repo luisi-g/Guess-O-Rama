@@ -10,11 +10,11 @@ in the long run.
 
 ## Modes
 
-#### Normal
+### Normal
 
 Guess the number between 0 and 10.
 
-#### Hard
+### Hard
 
 Guess the number between 0 and 100
 
