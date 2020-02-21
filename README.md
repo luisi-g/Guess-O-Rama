@@ -10,8 +10,8 @@ in the long run.
 
 ## Modes:
 
-* Normal: Guess the number between 0 and 10.
-* Hard: Guess the number between 0 and 100
+* **Normal:** Guess the number between 0 and 10.
+* **Hard:** Guess the number between 0 and 100
 
 ## Installation
  
