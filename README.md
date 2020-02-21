@@ -27,7 +27,9 @@ Guess the number between 0 and 100
 
 
 ## SnapShots
+### HomePage
 <img src="./public/assets/Home.png" alt="Guess-o-Rama"  width="330"/>
+### Mode
 <img src="./public/assets/Mode.png" alt="Guess-o-Rama"  width="330"/>
 <img src="./public/assets/Normal.png" alt="Guess-o-Rama"  width="330"/>
 <img src="./public/assets/Hard.png" alt="Guess-o-Rama"  width="330"/>
