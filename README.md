@@ -8,16 +8,10 @@ The objective of this game is to guess the number depending on the mode you have
 that it counts for and still under development. Beating your highscore is an additional goal you can strive for
 in the long run.
 
-## Modes
+## Modes:
 
-## Normal
-
-Guess the number between 0 and 10.
-
-## Hard
-
-Guess the number between 0 and 100
-
+* Normal: Guess the number between 0 and 10.
+* Hard: Guess the number between 0 and 100
 
 ## Installation
  
