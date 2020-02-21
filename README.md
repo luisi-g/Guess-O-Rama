@@ -1,4 +1,4 @@
-## Guess-O-Rama
+# Guess-O-Rama
 
 Guessing Game using react.js
 
